@@ -16,16 +16,28 @@
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased">
 
-    <!-- MENU DE NAVIGATION -->
+    <!-- MENU DE NAVIGATION UNIFIÉ (MOBILE & DESKTOP) -->
     <nav class="bg-gradient-to-r from-blue-900 to-indigo-950 text-white sticky top-0 z-50 shadow-md">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-black tracking-wider text-yellow-400">DOTO'M</a>
-            <div class="hidden md:flex space-x-6 text-sm font-bold uppercase">
-                <a href="index.html" class="text-yellow-400">Agenda JPS</a>
-                <a href="vbg.html" class="hover:text-yellow-400 transition">Urgence VBG</a>
-                <a href="associations.html" class="hover:text-yellow-400 transition">Associations</a>
+        <div class="container mx-auto px-4 py-3 flex flex-col sm:flex-row justify-between items-center gap-3">
+            
+            <!-- Logo et Alerte Mobile -->
+            <div class="flex justify-between items-center w-full sm:w-auto">
+                <a href="index.html" class="text-2xl font-black tracking-wider text-yellow-400">DOTO'M</a>
+                <!-- Ce bouton alerte ne s'affiche que sur mobile -->
+                <a href="vbg.html" class="sm:hidden bg-red-600 text-white text-xs px-3 py-1.5 rounded-xl font-bold uppercase animate-pulse">🚨 Alerte</a>
             </div>
-            <a href="vbg.html" class="bg-red-600 hover:bg-red-700 text-white text-xs px-4 py-2 rounded-xl font-bold uppercase transition animate-pulse">🚨 Alerte</a>
+            
+            <!-- Liens du menu (Défilant horizontalement sur mobile si l'écran est très petit) -->
+            <div class="flex space-x-5 overflow-x-auto max-w-full text-xs md:text-sm font-bold uppercase py-1 scrollbar-none">
+                <a href="index.html" class="hover:text-yellow-400 transition whitespace-nowrap">Agenda JPS</a>
+                <a href="vbg.html" class="hover:text-yellow-400 transition whitespace-nowrap">Urgence VBG</a>
+                <a href="associations.html" class="hover:text-yellow-400 transition whitespace-nowrap">Associations</a>
+                <a href="podcast.html" class="hover:text-yellow-400 transition whitespace-nowrap">Podcasts</a>
+            </div>
+            
+            <!-- Bouton Alerte (Masqué sur mobile, visible sur desktop) -->
+            <a href="vbg.html" class="hidden sm:inline-block bg-red-600 hover:bg-red-700 text-white text-xs px-4 py-2 rounded-xl font-bold uppercase transition animate-pulse">🚨 Alerte</a>
+            
         </div>
     </nav>
 
@@ -41,11 +53,10 @@
                     Doto’m utilise le numérique pour briser les barrières linguistiques et permettre à chaque jeune de s'approprier ses droits et devoirs de citoyen.
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="https://wa.me/VOTRE_NUMERO" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-6 rounded-xl shadow-md shadow-emerald-600/20 transition">💬 Lancer le Chatbot WhatsApp</a>
+                    <a href="https://dotom-bot-project.vercel.app/" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl shadow-md shadow-blue-600/20 transition">💬 Lancer le Chatbot Doto'm</a>
                     <a href="#jps-definition" class="bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3 px-6 rounded-xl transition">Découvrir l'Agenda JPS</a>
                 </div>
             </div>
-            <!-- Image Humaine : Jeunesse connectée et engagée -->
             <div class="relative">
                 <div class="absolute inset-0 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-3xl transform rotate-3 scale-102 opacity-10"></div>
                 <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=80" alt="Jeunesse Togolaise unie" class="rounded-3xl shadow-xl object-cover h-80 w-full relative z-10">
@@ -61,19 +72,17 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Pilier 1 -->
+            <!-- Piliers restants identiques -->
             <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition">
                 <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-2xl font-bold mb-4">🗣️</div>
                 <h3 class="text-lg font-bold text-slate-900 mb-2">1. Participation</h3>
                 <p class="text-slate-600 text-sm leading-relaxed">Impliquer activement les jeunes dans les processus de prise de décision, de la base locale jusqu'au niveau national.</p>
             </div>
-            <!-- Pilier 2 -->
             <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition">
                 <div class="w-12 h-12 bg-red-50 text-red-600 rounded-xl flex items-center justify-center text-2xl font-bold mb-4">🛡️</div>
                 <h3 class="text-lg font-bold text-slate-900 mb-2">2. Protection</h3>
                 <p class="text-slate-600 text-sm leading-relaxed">Garantir la sécurité des civils en période de tensions et lutter fermement contre les violences de genre (VBG).</p>
             </div>
-            <!-- Pilier 3 -->
             <div class="bg-white p-6 rounded-2xl border border-slate-200/60 shadow-sm hover:shadow-md transition">
                 <div class="w-12 h-12 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-2xl font-bold mb-4">🛑</div>
                 <h3 class="text-lg font-bold text-slate-900 mb-2">3. Prévention</h3>
@@ -86,9 +95,9 @@
             <div class="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1557683316-973673baf926?auto=format&fit=crop&w=600&q=85')] bg-cover bg-center"></div>
             <div class="relative z-10">
                 <h3 class="text-2xl font-bold">Prêt à tester vos connaissances ?</h3>
-                <p class="text-blue-200 text-sm mt-1">Participez à notre jeu-quiz interactif directement sur WhatsApp pour remporter votre badge d'Ambassadeur de la Paix.</p>
+                <p class="text-blue-200 text-sm mt-1">Participez à notre jeu-quiz interactif directement via notre robot intelligent en ligne.</p>
             </div>
-            <a href="https://wa.me/VOTRE_NUMERO" class="bg-yellow-400 hover:bg-yellow-500 text-slate-950 font-black px-6 py-3 rounded-xl whitespace-nowrap transition relative z-10 shadow-lg shadow-yellow-400/20">Jouer sur WhatsApp 🎮</a>
+            <a href="https://dotom-bot-project.vercel.app/" target="_blank" class="bg-yellow-400 hover:bg-yellow-500 text-slate-950 font-black px-6 py-3 rounded-xl whitespace-nowrap transition relative z-10 shadow-lg shadow-yellow-400/20">Lancer le Quiz Interactif 🎮</a>
         </div>
     </section>
 
