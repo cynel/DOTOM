@@ -23,19 +23,18 @@
             <!-- Logo et Alerte Mobile -->
             <div class="flex justify-between items-center w-full sm:w-auto">
                 <a href="index.html" class="text-2xl font-black tracking-wider text-yellow-400">DOTO'M</a>
-                <!-- Ce bouton alerte ne s'affiche que sur mobile -->
                 <a href="vbg.html" class="sm:hidden bg-red-600 text-white text-xs px-3 py-1.5 rounded-xl font-bold uppercase animate-pulse">🚨 Alerte</a>
             </div>
             
-            <!-- Liens du menu (Défilant horizontalement sur mobile si l'écran est très petit) -->
+            <!-- Liens du menu -->
             <div class="flex space-x-5 overflow-x-auto max-w-full text-xs md:text-sm font-bold uppercase py-1 scrollbar-none">
                 <a href="index.html" class="hover:text-yellow-400 transition whitespace-nowrap">Agenda JPS</a>
                 <a href="vbg.html" class="hover:text-yellow-400 transition whitespace-nowrap">Urgence VBG</a>
                 <a href="associations.html" class="hover:text-yellow-400 transition whitespace-nowrap">Associations</a>
-                <a href="podcast.html" class="hover:text-yellow-400 transition whitespace-nowrap">Podcasts</a>
+                <a href="podcast.html" class="text-yellow-400 whitespace-nowrap">Podcasts</a>
             </div>
             
-            <!-- Bouton Alerte (Masqué sur mobile, visible sur desktop) -->
+            <!-- Bouton Alerte Desktop -->
             <a href="vbg.html" class="hidden sm:inline-block bg-red-600 hover:bg-red-700 text-white text-xs px-4 py-2 rounded-xl font-bold uppercase transition animate-pulse">🚨 Alerte</a>
             
         </div>
@@ -54,7 +53,7 @@
         </div>
     </header>
 
-    <!-- LISTE DES ÉPISODES -->
+    <!-- LISTE DES ÉPISODES (VOS AUDIO EN FRANÇAIS) -->
     <main class="container mx-auto py-12 px-6 max-w-4xl">
         <div class="space-y-6">
             
@@ -66,7 +65,7 @@
                     <h3 class="font-bold text-slate-900 text-lg mt-2">Comprendre la Résolution 2250 au Togo</h3>
                     <p class="text-slate-600 text-sm mt-1 mb-4">Découvrez les fondements de l'Agenda JPS et comment la jeunesse togolaise s'approprie ces piliers de paix.</p>
                     <audio controls class="w-full h-10 accent-indigo-600">
-                        <source src="podcast-ep1.mp3" type="audio/mpeg">
+                        <source src="episode-1.mp3" type="audio/mpeg">
                         Votre navigateur ne supporte pas l'élément audio.
                     </audio>
                 </div>
@@ -74,13 +73,27 @@
 
             <!-- Épisode 2 -->
             <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row gap-6 items-center">
-                <div class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl font-bold shrink-0">📢</div>
+                <div class="w-20 h-20 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center text-3xl font-bold shrink-0">📢</div>
                 <div class="grow w-full">
-                    <span class="text-xs text-emerald-600 font-bold bg-emerald-50 px-2.5 py-1 rounded-md">Épisode 2</span>
+                    <span class="text-xs text-red-600 font-bold bg-red-50 px-2.5 py-1 rounded-md">Épisode 2</span>
                     <h3 class="font-bold text-slate-900 text-lg mt-2">Briser le silence face aux VBG</h3>
                     <p class="text-slate-600 text-sm mt-1 mb-4">Un espace d'échange dédié aux solutions numériques pour dénoncer et prévenir les Violences Basées sur le Genre.</p>
+                    <audio controls class="w-full h-10 accent-red-600">
+                        <source src="episode-2.mp3" type="audio/mpeg">
+                        Votre navigateur ne supporte pas l'élément audio.
+                    </audio>
+                </div>
+            </div>
+
+            <!-- Épisode 3 -->
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col md:flex-row gap-6 items-center">
+                <div class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl font-bold shrink-0">🤝</div>
+                <div class="grow w-full">
+                    <span class="text-xs text-emerald-600 font-bold bg-emerald-50 px-2.5 py-1 rounded-md">Épisode 3</span>
+                    <h3 class="font-bold text-slate-900 text-lg mt-2">Le rôle des institutions et ONG partenaires</h3>
+                    <p class="text-slate-600 text-sm mt-1 mb-4">Focus sur le travail d'accompagnement terrain mené par WANEP-Togo, l'ATBEF et le Ministère de l'Action Sociale.</p>
                     <audio controls class="w-full h-10 accent-emerald-600">
-                        <source src="podcast-ep2.mp3" type="audio/mpeg">
+                        <source src="episode-3.mp3" type="audio/mpeg">
                         Votre navigateur ne supporte pas l'élément audio.
                     </audio>
                 </div>
