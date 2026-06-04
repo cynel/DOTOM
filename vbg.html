@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doto’m - Signaler les VBG au Togo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- MENU DE NAVIGATION -->
+    <nav class="bg-gradient-to-r from-blue-900 to-indigo-950 text-white sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black tracking-wider text-yellow-400">DOTO'M</a>
+            <div class="hidden md:flex space-x-6 text-sm font-bold uppercase">
+                <a href="index.html" class="hover:text-yellow-400">Agenda JPS</a>
+                <a href="vbg.html" class="text-yellow-400">Urgence VBG</a>
+                <a href="associations.html" class="hover:text-yellow-400">Associations</a>
+            </div>
+            <a href="vbg.html" class="bg-red-600 text-white text-xs px-4 py-2 rounded-xl font-bold uppercase">🚨 Alerte</a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto py-12 px-6 max-w-4xl">
+        <!-- COMPRENDRE LES VBG -->
+        <section class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm mb-12">
+            <h1 class="text-3xl font-black text-slate-950 mb-4">Comprendre et Identifier les VBG</h1>
+            <p class="text-slate-600 leading-relaxed mb-6">
+                Les Violences Basées sur le Genre (VBG) désignent tout acte nuisible perpétré contre la volonté d'une personne en raison des différences structurelles entre les sexes. Elles constituent une violation grave des droits humains et un frein majeur à l'Agenda JPS.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div class="p-4 bg-red-50/50 rounded-xl border border-red-100">
+                    <strong class="text-red-800 block mb-1">🥊 Violence Physique & Sexuelle</strong>
+                    Coups, blessures, agressions ou rapports sexuels forcés au sein du couple ou de la communauté.
+                </div>
+                <div class="p-4 bg-orange-50/50 rounded-xl border border-orange-100">
+                    <strong class="text-orange-800 block mb-1">📱 Cyber-harcèlement & Chantage</strong>
+                    Menaces sur les réseaux sociaux, diffusion de photos privées sans consentement pour nuire ou humilier.
+                </div>
+            </div>
+        </section>
+
+        <!-- COMMENT SIGNALER -->
+        <section class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm mb-12">
+            <h2 class="text-2xl font-black text-slate-950 mb-4">Comment effectuer un signalement ?</h2>
+            <ol class="space-y-4 text-slate-600 list-decimal list-inside">
+                <li><strong class="text-slate-900">Par Téléphone (Urgence) :</strong> Contactez gratuitement le numéro vert national <a href="tel:1011" class="text-red-600 font-bold underline">1011</a> ouvert à tous.</li>
+                <li><strong class="text-slate-900">Via notre Chatbot WhatsApp :</strong> Envoyez le mot "Alerte" au chatbot pour remplir un formulaire guidé de façon 100% anonyme.</li>
+                <li><strong class="text-slate-900">Via les centres de proximité :</strong> Utilisez l'outil ci-dessous pour appeler directement l'organisme le plus proche.</li>
+            </ol>
+        </section>
+
+        <!-- APPAREIL INTERACTIF DE RECHERCHE DE NUMEROS -->
+        <section class="bg-slate-900 text-white p-8 rounded-3xl shadow-xl">
+            <div class="text-center mb-6">
+                <span class="text-2xl">📍</span>
+                <h3 class="text-xl font-bold mt-2">Trouver de l'aide par région au Togo</h3>
+                <p class="text-xs text-slate-400 mt-1">Sélectionnez votre zone géographique pour afficher les numéros d'urgence officiels.</p>
+            </div>
+
+            <div class="mb-6">
+                <select id="region-select" onchange="filterRegion()" class="w-full bg-slate-800 border-2 border-slate-700 rounded-xl p-3 text-white outline-none focus:border-yellow-400 transition">
+                    <option value="">-- Choisissez votre localisation --</option>
+                    <option value="maritime">Région Maritime & Lomé Commune</option>
+                    <option value="plateaux">Région des Plateaux</option>
+                    <option value="centrale">Région Centrale</option>
+                    <option value="kara">Région de la Kara</option>
+                    <option value="savanes">Région des Savanes</option>
+                </select>
+            </div>
+
+            <!-- Conteneur de résultats injecté par JS -->
+            <div id="contacts-output" class="space-y-3">
+                <p class="text-center text-slate-500 text-sm py-4">Les contacts filtrés s'afficheront ici.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm border-t border-slate-800">
+        <p>&copy; 2026 Équipe Nutifafa — Projet Doto'm | Hack4Peace WANEP-Togo</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
